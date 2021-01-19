@@ -5,40 +5,8 @@
 <title>Insert title here</title>
 
 </head>
-<body>
-
+<body>Video Not Found
 </body>
 
-<script
-	src="https://d2ur3inljr7jwd.cloudfront.net/individeo/prod/edge/js/smartEmbed.js"
-	data-bp-on-ready="onIndivideoReady"
-	data-bp-attachment-code="bWDsAjJ2TMyskB4GEWbC-752" data-bp-lang="en-CA"></script>
 
-<script type="text/javascript" th:inline="javascript">
-
-var p_nama =  /*[[${nama}]]*/ 1;
-function onIndivideoReady(smartPlayer){
-	 
-	 	var personalizedData = {
-			"SUM_ASSURED" : 500000000,
-			"POLICY_NUMBER" : "0123123123",
-			"INSURED_NAME" : p_nama,
-			"LIFE_ASSURED" : p_nama,
-			"POLICY_HOLDER_NAME" : p_nama
-		};
-	 
-	 BEM.bind(BluePlayer.ONMEDIACTA,function(e,p){
-	  var ctaName = p&&p.ctaName;
-	  var ctaValue = p&&p.ctaValue;
-	  
-	  var smartPlayer = BluePlayer.current;
-	  
-	  if(ctaName === "contact"){
-	   // code that react on the "contact" event...
-	  }
-	 });
-	 
-	 smartPlayer.initIndivideo(personalizedData);
-	}
-</script>
 </html>
