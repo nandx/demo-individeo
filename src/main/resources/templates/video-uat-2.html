@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Video UAT Working 2</title>
+
+</head>
+<body>
+
+</body>
+
+
+<script
+	src="https://d2ur3inljr7jwd.cloudfront.net/individeo/prod/edge/js/smartEmbed.js"
+	data-bp-on-ready="onIndivideoReady"
+	data-bp-attachment-code="YBDKhuSmKsJkneuqQ-840" data-bp-lang="en-CA"></script>
+
+
+
+<script type="text/javascript">
+function onIndivideoReady(smartPlayer){
+	 
+	 var personalizedData = {
+			"clientName1" : "Maulana",
+			"clientName2" : "Video UAT 2",
+			"componentDescription" : "My component description",
+			"policyNumber" : "My policy number",
+			"lifeAssured" : "My life assured",
+			"dateOfBirth" : "My date of birth",
+			"sumAssured" : 0,
+			"premiumAmount" : 0,
+			"paymentMethod" : "My payment method",
+			"codeFrequency" : "My code frequency",
+			"codePaymentMethod" : "My code payment"
+			};
+	 
+	 BEM.bind(BluePlayer.ONMEDIACTA,function(e,p){
+	  var ctaName = p&&p.ctaName;
+	  var ctaValue = p&&p.ctaValue;
+	  
+	  var smartPlayer = BluePlayer.current;
+	  
+	  if(ctaName === "contact"){
+	   // code that react on the "contact" event...
+	  }
+	 });
+	 
+	 smartPlayer.initIndivideo(personalizedData);
+	}
+</script>
+
+</html>

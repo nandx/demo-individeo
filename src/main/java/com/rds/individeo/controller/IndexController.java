@@ -30,4 +30,19 @@ public class IndexController {
 		return "video";
 	}
 
+	@GetMapping("/video-working")
+	public String working() {
+		return "video-working";
+	}
+	
+	@GetMapping("/video-uat")
+	public String videouat() {
+		return "video-uat";
+	}
+	
+	@GetMapping("/video-uat-2")
+	public String videouat2() {
+		return "video-uat-2";
+	}
+
 }

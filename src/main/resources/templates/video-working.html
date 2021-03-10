@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+</body>
+
+<script
+	src="https://d2ur3inljr7jwd.cloudfront.net/individeo/prod/edge/js/smartEmbed.js"
+	data-bp-on-ready="onIndivideoReady"
+	data-bp-attachment-code="bWDsAjJ2TMyskB4GEWbC-752" data-bp-lang="en-CA"></script>
+
+<script type="text/javascript" th:inline="javascript">
+
+function onIndivideoReady(smartPlayer){
+	€ƒ
+	€ƒ	var personalizedData = {
+			"SUM_ASSURED" : '1.000.000',
+			"POLICY_NUMBER" : '1234567890',
+			"INSURED_NAME" : 'Nanda',
+			"LIFE_ASSURED" :  'Nanda',
+			"POLICY_HOLDER_NAME" :  'Nanda'
+		};
+	€ƒ
+	€ƒBEM.bind(BluePlayer.ONMEDIACTA,function(e,p){
+	€ƒvar ctaName = p&&p.ctaName;
+	€ƒ€ƒvar ctaValue = p&&p.ctaValue;
+	€ƒ€ƒ
+	€ƒ€ƒvar smartPlayer = BluePlayer.current;
+	€ƒ€ƒ
+	€ƒ€ƒif(ctaName === "contact"){
+	€ƒ€ƒ€ƒ// code that react on the "contact" event...
+	€ƒ€ƒ}
+	€ƒ});
+	€ƒ
+	€ƒsmartPlayer.initIndivideo(personalizedData);
+	}
+</script>
+</html>

@@ -17,27 +17,27 @@
 <script type="text/javascript" th:inline="javascript">
 
 function onIndivideoReady(smartPlayer){
-	 
-	 	var personalizedData = {
+	
+		var personalizedData = {
 			"SUM_ASSURED" : '1.000.000',
 			"POLICY_NUMBER" : /*[[${data.policy_number}]]*/,
 			"INSURED_NAME" : /*[[${data.life_assured}]]*/,
 			"LIFE_ASSURED" :  /*[[${data.life_assured}]]*/,
 			"POLICY_HOLDER_NAME" :  /*[[${data.policy_holder_name}]]*/
 		};
-	 
-	 BEM.bind(BluePlayer.ONMEDIACTA,function(e,p){
-	  var ctaName = p&&p.ctaName;
-	  var ctaValue = p&&p.ctaValue;
-	  
-	  var smartPlayer = BluePlayer.current;
-	  
-	  if(ctaName === "contact"){
-	   // code that react on the "contact" event...
-	  }
-	 });
-	 
-	 smartPlayer.initIndivideo(personalizedData);
+	
+	BEM.bind(BluePlayer.ONMEDIACTA,function(e,p){
+	var ctaName = p&&p.ctaName;
+	var ctaValue = p&&p.ctaValue;
+	
+	var smartPlayer = BluePlayer.current;
+	
+	if(ctaName === "contact"){
+	// code that react on the "contact" event...
+	}
+	});
+	
+	smartPlayer.initIndivideo(personalizedData);
 	}
 </script>
 </html>
